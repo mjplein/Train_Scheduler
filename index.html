@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- link bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- link to jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+        <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+            <!-- moment.js link -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <title>Train Schedule</title>
+</head>
+<body>
+    <div class="container">
+        <!-- head jumbotron -->
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-4">Anytime is Train Time</h1>
+            <p class="lead">Choo Choo. Chee Chee</p>
+        </div>
+        <!-- current employees -->
+        <div class="card">
+            <div class="card-header">
+                Current Train Schedule
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trainData">
+                        <!-- <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <!-- add employee form  -->
+        <div class="card">
+            <div class="card-header">
+                Add Train
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nameInput">Train Name</label>
+                        <input type="text" class="form-control" id="trainName" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="destInput">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrainInput">First Train Time (military time)</label>
+                        <input type="text" class="form-control" id="startTime" placeholder="HH:mm">
+                    </div>
+                    <div class="form-group">
+                        <label for="rateInput">Frequency (min)</label>
+                        <input type="text" class="form-control" id="frequency" placeholder="Minutes">
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- close container -->
+
+    <!-- bootstrap links -->
+    <!-- link to javascript file -->
+    <script type="text/javascript" src="train.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
